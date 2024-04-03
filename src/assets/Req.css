@@ -1,0 +1,203 @@
+body {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 5vw;
+    box-sizing: border-box;
+  }
+  .reqback{
+    background-color: #288fb4;
+    width:100vw;
+    height:100vh;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+      }
+
+   #desc{
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid black; 
+    border-radius: 8px; 
+    font-weight: bold;
+    resize: none;
+    color: #0c0c0c;
+   }  
+   #subut:hover {
+    color: #fff;
+    background-color: #174cc0 ;
+  } 
+  #char-count{
+    opacity: 0.7;
+  }
+ /*desktop */
+      @media screen and (min-width: 601px){
+
+        .form-group{
+          margin-bottom: 5%;
+        }
+
+        #req-form {
+        
+            width:90vw;
+            max-width: 400px;
+            border-radius: 8px;
+            margin-top: 3vh;
+            margin-left: 35%;
+            text-align: center;
+            border: 1px solid rgb(255, 255, 255);
+            box-shadow: 0px 4px 10px rgba(230, 224, 224, 0.3);
+            backdrop-filter: blur(9px);
+            -webkit-backdrop-filter: blur(9px);
+          }
+          #materlabel{
+            position: absolute;
+            font-size: 1.2vw;
+            color: white;
+            left:5%;
+          }
+           #material{
+            position: relative;
+            background: transparent;
+            height: 3.5vh;
+            margin-top: -15%;
+            margin-left: 30%;
+            width: 60%;
+            font-size: 15px;
+            color: rgb(245, 249, 248);
+            border: 2px solid rgb(255, 255, 255);
+          }
+          #material option {
+            
+            color: rgb(24, 206, 212);
+            height: 5vh;
+          }
+          #gapy{
+            padding: 3vh;
+          }
+          #desclabel{
+            position: absolute;
+            font-size: 1.2vw;
+            color: white;
+            bottom: 50%;
+            left:5%;
+          }
+          #desc{
+            left:15%;
+            height: 10vw; 
+            width: 15vw; 
+          }
+
+
+          #subut{
+            background-color: #ffff ;
+            color: #000000;
+            font-weight: 700 ;
+            padding: 2vh 2vh ;
+            margin-top: 6vh;
+            margin-bottom: 3vh;
+            border: none;
+            text-align: center;
+            margin-left: 17%;
+            width: 70%;
+            
+            cursor: pointer;
+            border-radius: 20px;
+            font-size: 1vw;
+            
+            transition: 0.3s ease;
+          }
+         
+      }
+      
+      /*mobile screen*/
+      
+      @media screen and (max-width: 600px){
+
+        .form-group{
+          margin-bottom: 7%;
+        }
+
+        #req-form {
+          width: 80vw;
+          max-width: 400px;
+          border-radius: 8px;
+         
+          text-align: center;
+          border: 1px solid rgba(255, 255, 255, 0.5);
+          box-shadow: 0px 4px 10px rgba(230, 224, 224, 0.3);
+          backdrop-filter: blur(9px);
+          -webkit-backdrop-filter: blur(9px);
+      }
+      body #req-form{
+        padding: 2vh 2vw;
+        margin-top: 15%;
+        margin-left: 7.5%;
+        margin-bottom: 5%;
+     }
+     h2{
+      
+      padding: 2vh 2vh;
+      margin-top: 2vh;
+      
+      margin-bottom: 4vh;
+     }
+    
+    #materlabel{
+      position: absolute;
+      font-size: 4.8vw;
+      margin-top: 2%;
+      color: white;
+      left: 5%;
+    }
+    div #material{
+      position: relative;
+      background: transparent;
+      height: 3vh;
+      margin-bottom: 5%;
+      bottom: 10%;
+      margin-top: 2.5%;
+      margin-left: 36%;
+      width: 55%;
+      font-size: 15px;
+      color: rgb(245, 249, 248);
+      border: 2px solid rgb(176, 180, 180);
+    }
+    #gapy{
+      padding: 8vw;
+    }
+    #desclabel{
+      display: none;
+    }
+    
+      #desc{
+        margin-top: -20%;
+        left:19%;
+        height: 40vw; 
+        width: 43vw; 
+      }
+
+    #char-count{
+      margin-left:19%;
+      font-size: 1.5vh;
+    }  
+
+    #subut{
+      background-color: #ffff ;
+      color: #000000;
+      font-weight: 700 ;
+      border: none;
+      margin: 2.5vh auto;
+      width: 70%;
+      padding: 1vh 1vw 2vw 0;
+      cursor: pointer;
+      border-radius: 20px;
+      font-size: 5vw;
+      border: 0.5vw solid transparent;
+      transition: 0.3s ease;
+    }
+    }
+      

@@ -1,0 +1,253 @@
+body {
+    display: flex;
+    
+    box-sizing: border-box;
+  }
+  .signback{
+    background-color: #288fb4;
+    width: 100vw;
+    height: 100vh;
+  
+  }
+  .anch{
+    padding: 4vh;
+  }
+
+  
+
+
+  form {
+  
+    flex-direction: column;
+      }
+
+     .pass2{
+      padding: 3vh;
+     }
+      #field label {
+        position: relative;
+         color: #fff;
+        pointer-events: none;
+        }
+      
+      #field input {
+      
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+      
+          }
+          #bu:hover {
+            color: #fff;
+            background-color: #174cc0  ;
+          }
+
+
+@media screen and (min-width: 601px){
+    #wrap {
+      
+        width: 80vw;
+        max-width: 400px;
+        border-radius: 8px;
+       
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        box-shadow: 0px 4px 10px rgba(230, 224, 224, 0.3);
+        backdrop-filter: blur(9px);
+        -webkit-backdrop-filter: blur(9px);
+    }
+    body #wrap{
+      position: relative;
+        padding: 2vh 2vw;
+        margin-top: 2%;
+        margin-left: 35%;
+     }
+     h2{
+      padding: 2vh 2vh;
+      margin-top: 1vh;
+     }
+     
+     #field {
+        position:relative;
+        
+       
+       padding: 2vh 2vh;
+      }
+      #field label {
+      position: absolute;
+      bottom: 150%;
+       left: 0;
+       font-size:1.2vw;
+    }
+   
+    
+    #field input {
+        position: absolute;
+        
+        border-bottom: 0.2vw solid #ffffff;
+        margin-top: -14.5%;
+        left: 35%;
+      height: 3vh;
+      font-size: 1.3vw;
+      width: 60%;
+      
+    }
+  #typelabel{
+      position: absolute;
+      font-size: 1.2vw;
+      color: white;
+      left:7%;
+    }
+    div #userTypeSelect{
+      position: relative;
+      background: transparent;
+      height: 3.5vh;
+      margin-top: -15%;
+      margin-left: 30%;
+      width: 60%;
+      font-size: 15px;
+      color: rgb(245, 249, 248);
+      border: 2px solid rgb(255, 255, 255);
+    }
+    div #userTypeSelect option {
+      
+      color: rgb(24, 77, 212);
+      height: 3.5vh;
+      
+      background: transparent;
+    }
+    
+    
+
+    #bu{
+      background-color: #ffff ;
+      color: #000000;
+      font-weight: 700 ;
+      padding: 2vh 2vh ;
+      margin-top: 6vh;
+      margin-bottom: 3vh;
+      border: none;
+      
+      width: 80%;
+      
+      cursor: pointer;
+      border-radius: 20px;
+      font-size: 1vw;
+      
+      transition: 0.3s ease;
+    }
+    .errmsg{
+      
+      margin-right:1vw;
+      
+      font-size: 13px;
+    }
+   
+
+}
+
+
+
+
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+   
+    #wrap {
+        
+        width: 85vw;
+        max-width: 400px;
+        border-radius: 8px;
+        margin-bottom: 5vh;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        box-shadow: 0px 4px 10px rgba(230, 224, 224, 0.3);
+        backdrop-filter: blur(9px);
+        -webkit-backdrop-filter: blur(9px);
+      }
+      body #wrap{
+        padding: 1vh 1vw;
+        margin-left: 7%;
+        margin-top: 20%;
+        margin-bottom: 5%;
+      }
+      h2 {
+        font-size:10vw;
+      
+        color: #fff;
+      }
+      #field {
+        position: relative;
+        
+        margin: 2vh 2vh ;
+        margin-top: 0.1vh;
+      }
+      #field label {
+        position: absolute;
+         bottom:130%;
+         left: 0;
+         font-size:5vw;
+  }
+  #field input {
+    position: absolute;
+    border-bottom: 0.2vw solid #f7fbfa;
+    
+    margin-top:-9.5%;
+    height: 3vh;
+    left: 39%;
+    font-size: 5vw;
+    
+    width: 60%;
+    
+  }
+  #space{
+    padding: 7vw;
+  }
+  #typelabel{
+    position: absolute;
+    font-size: 4.8vw;
+    margin-top: 2%;
+    color: white;
+    left: 5%;
+  }
+  div #userTypeSelect{
+    position: relative;
+    background: transparent;
+    height: 3vh;
+    margin-bottom: 5%;
+    bottom: 10%;
+    margin-top: 2.5%;
+    margin-left: 36%;
+    width: 55%;
+    font-size: 15px;
+    color: rgb(245, 249, 248);
+    border: 2px solid rgb(252, 254, 254);
+  }
+   
+  #bu{
+    background-color: #ffff ;
+    color: #000000;
+    font-weight: 700 ;
+    border: none;
+    margin: 2.5vh auto;
+    width: 70%;
+    padding: 1vh 1vw 2vw 0;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 5vw;
+    border: 0.5vw solid transparent;
+    transition: 0.3s ease;
+  }
+  .errmsg{
+     
+    margin-bottom: -2vh;
+    margin-left: 3vh;
+    font-size: 13px;
+  }
+  #spa{
+    padding: 3vw;
+  }
+  
+    }
