@@ -123,7 +123,7 @@ const Location = () => {
 
         try {
           // Make a POST request to the backend endpoint
-          await axios.post('http://localhost:5000/emergency', {
+          await axios.post('https://rapidaidnetwork-backend.onrender.com/emergency', {
             latitude,
             longitude
           });

@@ -7,7 +7,7 @@ const Pic = () => {
   const fetchProfilePic = useCallback(async () => {
     try {
       const userEmail = JSON.parse(localStorage.getItem('userEmail'));
-      const response = await axios.get('http://localhost:5000/image', {
+      const response = await axios.get('https://rapidaidnetwork-backend.onrender.com/image', {
         params: { userEmail },
       });
       const data = response.data;

@@ -13,7 +13,7 @@ const Profile = () => {
   const fetchProfileData = useCallback(async () => {
     try {
       const userEmail = JSON.parse(localStorage.getItem('userEmail'));
-      const response = await axios.get('http://localhost:5000/Profile', {
+      const response = await axios.get('https://rapidaidnetwork-backend.onrender.com/Profile', {
         params: { userEmail },
       });
       const data = response.data;
@@ -44,7 +44,7 @@ const Profile = () => {
       formData.append('profilePicture', selectedFile);
 
       const userEmail = JSON.parse(localStorage.getItem('userEmail'));
-      await axios.post(`http://localhost:5000/Profile/upload/${userEmail}`, formData);
+      await axios.post(`https://rapidaidnetwork-backend.onrender.com/Profile/upload/${userEmail}`, formData);
 
       // Fetch user profile data again after successful upload
       fetchProfileData();
@@ -67,7 +67,7 @@ if(authState)
           {/* Display profile picture if available */}
           {userProfile.profilePic ? (
             <img
-              src={`http://localhost:5000/${userProfile.profilePic.replace(/\\/g, '/')}`}
+              src={`https://rapidaidnetwork-backend.onrender.com/${userProfile.profilePic.replace(/\\/g, '/')}`}
               alt={`Profile of ${userProfile.firstName} ${userProfile.lastName}`}
               style={{ maxWidth: '200px' }}
             />

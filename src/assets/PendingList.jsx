@@ -15,7 +15,7 @@ const PendingList = () => {
     // Fetch requests from the backend when the component mounts
     const fetchRequests = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/pend/requests?email=${email}`);
+        const response = await axios.get(`https://rapidaidnetwork-backend.onrender.com/pend/requests?email=${email}`);
         setRequests(response.data);
       } catch (error) {
         console.error('Error fetching requests:', error.message);
@@ -28,7 +28,7 @@ const PendingList = () => {
   const handleDeleteRequest = async (requestId) => {
     try {
       // Make a DELETE request to the backend to delete the request
-      await axios.delete(`http://localhost:5000/requests/${requestId}`);
+      await axios.delete(`https://rapidaidnetwork-backend.onrender.com/requests/${requestId}`);
 
       // Update the local state to reflect the deleted request
       setRequests((prevRequests) => prevRequests.filter((request) => request._id !== requestId));

@@ -39,7 +39,7 @@ const Emergency = () => {
         await fetchUserLocation(); // Fetch user location first
 
         // Fetch emergency data
-        const response = await axios.get('http://localhost:5000/emergency');
+        const response = await axios.get('https://rapidaidnetwork-backend.onrender.com/emergency');
         const emergencyData = response.data;
 
         // Filter data within 20KM radius

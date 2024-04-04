@@ -24,7 +24,7 @@ const Login = () => {
     try {
       setLoading(true);
 
-      const response = await axios.post('http://localhost:5000/login', {
+      const response = await axios.post('https://rapidaidnetwork-backend.onrender.com/login', {
         userEmail,
         userPassword,
       });

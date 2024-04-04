@@ -24,7 +24,7 @@ const SignUp = () => {
     try {
       setLoading(true);
 
-      const response = await fetch('http://localhost:5000/signup', {
+      const response = await fetch('https://rapidaidnetwork-backend.onrender.com/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ const SignUp = () => {
   };
   const checkEmailExists = async (email) => {
     try {
-      const response = await fetch(`http://localhost:5000/check-email?email=${email}`);
+      const response = await fetch(`https://rapidaidnetwork-backend.onrender.com/check-email?email=${email}`);
       const data = await response.json();
       setEmailExists(data.exists);
     } catch (error) {

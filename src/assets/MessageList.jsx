@@ -15,7 +15,7 @@ const Messages = () => {
   useEffect(() => {
     const fetchUserRooms = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/rooms/${currentUserEmail}`);
+        const response = await axios.get(`https://rapidaidnetwork-backend.onrender.com/rooms/${currentUserEmail}`);
         setUserRooms(response.data);
       } catch (error) {
         console.error('Error fetching user rooms:', error.message);
@@ -29,7 +29,7 @@ const Messages = () => {
       try {
         const pics = {};
         for (const room of userRooms) {
-          const response = await axios.get('http://localhost:5000/image', {
+          const response = await axios.get('https://rapidaidnetwork-backend.onrender.com/image', {
             params: { userEmail: room.user1 === currentUserEmail ? JSON.parse(room.user2) : JSON.parse(room.user1) },
           });
           pics[room.roomId] = response.data; // Store profile picture data in the state
@@ -57,7 +57,7 @@ const Messages = () => {
                 Chat with {room.user1 === currentUserEmail ? room.userName2 : room.userName1}
                 {profilePics[room.roomId] ? (
   <img
-    src={`http://localhost:5000/${profilePics[room.roomId].replace(/\\/g, '/')}`}
+    src={`https://rapidaidnetwork-backend.onrender.com/${profilePics[room.roomId].replace(/\\/g, '/')}`}
     alt="Profile"
     style={{
       width: '50px', // Adjust the width as needed

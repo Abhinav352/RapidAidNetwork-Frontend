@@ -15,7 +15,7 @@ const RequestList = () => {
   useEffect(() => {
     const fetchRequests = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/requests');
+        const response = await axios.get('https://rapidaidnetwork-backend.onrender.com/requests');
         setRequests(response.data);
       } catch (error) {
         console.error('Error fetching requests:', error.message);
@@ -31,7 +31,7 @@ const RequestList = () => {
       const currentUserName = localStorage.getItem('userName');
 
       // Check if a room with the given user emails already exists
-      const response = await axios.post('http://localhost:5000/createRoom', {
+      const response = await axios.post('https://rapidaidnetwork-backend.onrender.com/createRoom', {
         user1: currentUserEmail,
         user2: userEmail,
         userName1: currentUserName, // Include the current user's userName
