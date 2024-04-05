@@ -63,8 +63,9 @@ const Location = () => {
     try {
       const response = await axios.get(`https://rapidaidnetwork-backend.onrender.com/Location/${accessToken}`);
       setDisasterData(response.data);
+      console.log(disasterData);
     } catch (error) {
-      console.error('Error fetching News:', error.message);
+      console.error('Error fetching Data:', error.message);
     }
   };
 
