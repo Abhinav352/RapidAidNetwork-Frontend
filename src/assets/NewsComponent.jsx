@@ -18,7 +18,7 @@ const NewsComponent = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/News/${currentPage}`);
+        const response = await axios.get(`https://rapidaidnetwork-backend.onrender.com/News/${currentPage}`);
         setNews(response.data);
       } catch (error) {
         console.error('Error fetching News:', error.message);
