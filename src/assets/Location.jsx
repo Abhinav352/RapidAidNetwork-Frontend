@@ -11,6 +11,7 @@ const Location = () => {
   const [refreshToken, setRefreshToken] = useState('');
   const [userInDisasterArea, setUserInDisasterArea] = useState(false);
   const [checkedornot, setcheckedornot,] = useState(false);
+  const navigate = useNavigate();
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -157,18 +158,26 @@ const Location = () => {
     <>
     <div className='whole'>
       <div className="sos-container">
-        <div className="outer-circle"></div>
-          <div className="inner-circle"></div>
-            <button
+        {/* <div className="outer-circle"></div>
+          <div className="inner-circle"></div> */}
+            {/* <button
             className="sos-button"
             onClick={() => {
             getCurrentLocation();
-            }}
+            }} 
             >
             <span>
             SOS
             </span>
-            </button>
+            </button> */}
+            <button onClick={()=>
+            {
+              navigate('/chat/b03c0dc7-8adf-40d7-b61e-35fbda203c40')
+            }}>Chat</button>
+             <button onClick={()=>
+            {
+              navigate('/Login')
+            }}>Login</button>
       </div>
       <ImageSlider/>
     </div>
