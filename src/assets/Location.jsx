@@ -63,7 +63,6 @@ const Location = () => {
     try {
       const response = await axios.get(`https://rapidaidnetwork-backend.onrender.com/Location/${accessToken}`);
       setDisasterData(response.data);
-      console.log(disasterData);
     } catch (error) {
       console.error('Error fetching Data:', error.message);
     }
@@ -120,6 +119,7 @@ const Location = () => {
     }
     console.log('User is not in any of the disaster areas.');
     console.log(userLocation);
+    console.log(disasterData)
     // Continue with your application logic
   };
 
